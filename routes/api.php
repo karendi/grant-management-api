@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // login and register users
-Route::middleware('auth:api')->post('register', 'App\Http\Controllers\RegisterController@register');
+Route::middleware('return-json:api')->post('register', 'App\Http\Controllers\RegisterController@register');
     
 Route::middleware('return-json:api')->post('login', 'App\Http\Controllers\RegisterController@login');
 
